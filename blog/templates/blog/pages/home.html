@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabelas Responsivas</title>
+    <link rel="stylesheet" href="{% static '/global/css/table-styles.css'%}">
+</head>
+
+<body>
+    <div class="content">
+                {% include 'blog/pages/tables/head_table.html' %}
+                {% for blog in blogs %}
+                    {% include 'blog/pages/tables/table.html' %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
